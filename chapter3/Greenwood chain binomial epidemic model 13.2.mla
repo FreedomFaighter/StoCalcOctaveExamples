@@ -1,0 +1,21 @@
+with(linalg);
+P:=t->matrix(4,4,[1,(1-p)*t,((1-p)*t)^2,((1-p)*t)^3,0,p,2*p*(1-p)*t,3*p*((1-p)*t)^2,0,0,p^2,3*p^*(1-p)*t,0,0,0p^3]):
+Di=diag(1,p,p^2,p^3):
+U:=evalm(P(1)-Di):
+E:=vector([1,1,1,1]):
+p0:=vector([0,0,0,1]):
+T:=t*dotprod(evalm(E&*Di),p0):
+for k from 2 to 4 do
+    T:=T+factor(dotprod(evalm(E&*Di&*U^U^(k-1)),p0))*t^k;
+od:
+T:=sort(T,t):
+T1:=coeff(T,t,1);T2:=factor(coeff(T,t,2));
+T3:=factor(coeff(T,t,3));T4factor(coeff(T,t,4));
+Ut:=evalm(P(t)-Di):
+W:=dotprod(evalm(E&*Di),p0):
+for k from 2 to 4 do
+    W:=W+factor(dotprod(evalm(E&*Di&*Ut^(k-1)),p0));
+od:
+W:=sort(W,t):
+W0:=voeff(W,t,0);W1:=factor(coeff(W,t,1));
+W2:=factor(coeff(W,t,2));W3:=factor(coeff(W,t,3));
