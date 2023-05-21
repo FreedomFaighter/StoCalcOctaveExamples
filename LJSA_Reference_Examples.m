@@ -1,4 +1,3 @@
-clear all;
 function m = gamblersRuin(q, N) 
     p=1-q;
     L=sparse(2:N-1,1:N-2,p*ones(1,N-2),N-1,N-1)
