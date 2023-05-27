@@ -10,7 +10,7 @@ function [m,s] = nutrientDepletion(nsim, einf, ping, k1, k_1, k2)
             p(1)=0;
         while n(j)>0
             ev=(kmax*n(j))/km+n(j);
-            rn=1rand;
+            rn1=rand;
             t(j+1)=t(j)-log(rn1)/ev;
             n(j+1)=n(j)-1;
             p(j+1)=p(j)+1;
