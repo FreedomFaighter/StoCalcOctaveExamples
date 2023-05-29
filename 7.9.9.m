@@ -20,7 +20,7 @@ function [m,s] = nutrientDepletion(nsim, einf, ping, k1, k_1, k2)
     end
     hist(nend,[30:1:150]);
     xlabel('Time (seconds)');
-    s1 = 'Prob\ times';
+    s1 = 'Prob \times';
     s2 = str(k_1);
     ylabel(strcat(s1, s2));
     m=mean(nend)
