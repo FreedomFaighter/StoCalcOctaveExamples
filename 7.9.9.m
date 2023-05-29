@@ -1,7 +1,7 @@
 %7.9.9 from LJSA
 function [m,s] = nutrientDepletion(nsim, einf, ping, k1, k_1, k2)
-    kmax=(k2*eninf);
-    km=(_1+k2)/k1;
+    kmax=(k2*einf);
+    km=(k_1+k2)/k1;
     nend=zeros(1,nsim);
     for i=1:nsim
         j=1;
@@ -20,7 +20,7 @@ function [m,s] = nutrientDepletion(nsim, einf, ping, k1, k_1, k2)
     end
     hist(nend,[30:1:150]);
     xlabel('Time (seconds)');
-    s1 = 'Prob \times ';
+    s1 = 'Prob\ times';
     s2 = str(k_1);
     ylabel(strcat(s1, s2));
     m=mean(nend)
