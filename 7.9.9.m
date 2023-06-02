@@ -1,5 +1,5 @@
 %7.9.9 from LJSA
-function [nend] = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
+function nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
     kmax=(k2*einf);
     km=(k_1+k2)/k1;
     nend=zeros(1,nsim);
@@ -18,5 +18,6 @@ function [nend] = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
         end
         nend(i)=t(j);
     end
+    return nend;
 endfunction
             
