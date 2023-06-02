@@ -18,6 +18,6 @@ function retval = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
         end
         nend1(i)=t(j);
     end
-    nend=nend1;
+    retval=nend1;
 endfunction
             
