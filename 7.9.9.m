@@ -2,7 +2,7 @@
 function retval = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
     kmax=(k2*einf);
     km=(k_1+k2)/k1;
-    nend1=zeros(1,nsim);
+    nend=zeros(1,nsim);
     for i=1:nsim
         j=1;
             t(1)=0.;
@@ -16,8 +16,8 @@ function retval = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
             p(j+1)=p(j)+1;
             j=j+1;
         end
-        nend1(i)=t(j);
+        nend(i)=t(j);
     end
-    retval=nend1;
+    retval=nend;
 endfunction
             
