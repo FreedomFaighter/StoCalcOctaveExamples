@@ -18,5 +18,5 @@ function [nend] = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
         end
         nend(i)=t(j);
     end
-end
+endfunction
             
