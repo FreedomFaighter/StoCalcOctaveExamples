@@ -2,7 +2,7 @@
 %Gibson et al. Nature 2006
 %d is matrix dimension of truncated P
 %states {4,5,......,d+3}
-function [Me] = proliferatingEpithelialCells(d)
+function [Mean] = proliferatingEpithelialCells(d)
   if(d<2)
     fprintf('d is less then two and will not fit in the dimension needed for matrix S');
     return;
@@ -23,5 +23,5 @@ function [Me] = proliferatingEpithelialCells(d)
   ival=find(G==max(G));
   W=abs(V(:,ival));
   W=W/norm(W,1) %Stationary Distribution
-  Me=Dot(W,[4:1:d+3]') %Mean of the Stationary Distribution
+  Mean=Dot(W,[4:1:d+3]') %Mean of the Stationary Distribution
 end
