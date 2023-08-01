@@ -1,5 +1,5 @@
 %7.9.9 from LJSA
-function retval = nutrientDepletion(nsim, einf, pinf, k1, k_1, k2)
+function retval = nutrientDepletion(nsim=10000, einf=120, pinf=301, k1=1.66*10^(-3), k_1=10^(-4), k2=0.1)
     kmax=(k2*einf);
     km=(k_1+k2)/k1;
     nend=zeros(1,nsim);
