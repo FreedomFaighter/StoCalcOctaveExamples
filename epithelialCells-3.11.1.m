@@ -2,7 +2,7 @@
 %Gibson et al. Nature 2006
 %d is matrix dimension of truncated P
 %states {4,5,......,d+3}
-function [Mean] = proliferatingEpithelialCells(d)
+function [Mean] = proliferatingEpithelialCells(d=16)
   if(d<2)
     fprintf('d is less then two and will not fit in the dimension needed for matrix S');
     return;
