@@ -1,3 +1,4 @@
+C simple birt path process
 REAL*8 N(50), T(50),Y,B,XX
 PRINT *, 'SEED (POSITIVE NUMBER < M)'
 READ *, XX
