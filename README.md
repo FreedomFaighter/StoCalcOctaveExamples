@@ -1,3 +1,5 @@
+Running this code may result in a plagiarism accusation
+
 # Stochastic Calculus simulation examples
 
 Attempts have been made to remove the hard coded values where possible and include them in the function header
